@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    
+      <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Raleway|Vibes&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Raleway|Vibes|Work+Sans&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway|Vibes|Work+Sans&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lalezar|Raleway|Vibes|Work+Sans&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <link href="css/magnify.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <link href="bootstrap-rtl.css" rel="stylesheet" type="text/css" />
+
+      <style>
+        .rmv{
+  background-color: #EEAA9C;
+}
+#myNavbar{
+  margin-right:200px;
+}
+     </style>
+    </head>	
+<body>
+
+
+
+<nav class="navbar navbar-inverse" id="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+        <a class="navbar-brand titlem" href="#">توليب فلاور</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        
+         <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="Home.html">Home</a></li>
+            <li><a href="product-ar.html">product 1</a></li>
+            <li><a href="product-en.html">product 2</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- <li><a href="#">Page 2</a></li> -->
+            <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+            <li><a href="javascript:void(0);" onclick="showModel();"><span class="fa fa-shopping-cart cart flt-right "></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+		 
+<div class="product items container">
+		<h1 class="title">تسوق افضل الزهور</h1>
+    <p class="title2" >اشتري</p>
+    <div class="input-group " style=" width:25%;  margin-bottom:10px; margin-left:30px;">
+      <span class="input-group-btn">
+        <button class="btn btn-search " type="button"><i class="fa fa-search fa-fw"></i> بحث</button>
+      </span>
+      <input type="text" class="form-control" placeholder="ابحث عن..." id = "project">
+         
+    </div>	
+    <div class="row">
+        <div class="result p col-lg-4 col-md-6 col-sm-12" ></div>
+    <div class="result p col-lg-4 col-md-6 col-sm-12" style="margin:0 auto;">
+        <img   id="img" style="
+        margin-bottom:22px;
+        margin-left:30px;
+        margin-top:0px;"  ></img>
+        
+        <h3 id="name" class="ptitle" ></h3>
+        <h4 id="rprice" class="price "></h4>
+        <p id = "project-description"></p>
+        </div>
+        <div class="result p col-lg-4 col-md-6 col-sm-12" ></div>
+    </div>
+    	<div class="row">
+		<div class="p  col-lg-4 col-md-6 col-sm-12">
+		
+		
+        <img  src="images/p1.jpg" data-magnify-src="images/p1.jpg"  class="pimg"></img>
+        
+        <h3 class="ptitle" >BACHELOR’S </h3>
+        <h4 class="price ">$9.000</h4>
+        <button class="shop my-btn  " id="btnAdd1" onclick="addTochart('item1','images/p1.jpg','BACHELOR’S ','9.000');this.style.display='none';document.getElementById('btnRmv1').style.display='inline-block'"  >أضافة الى السلة</button>
+        <button class="shop rmv" id="btnRmv1" onclick="removeItem('item1');this.style.display='none';document.getElementById('btnAdd1').style.display='inline-block'" >REMOVE FROM CHART</button>
+        <button class="btn btn-primary shop details" data-toggle="modal" data-target="#exampleModal6" >تفاصيل اكثر</button>
+        </div>
+        
+            
+        
+        <div class="p  col-lg-4 col-md-6 col-sm-12">
+            <img  src="images/p2.jpg" data-magnify-src="images/p2.jpg"   class="pimg"></img>
+            
+            <h3 class="ptitle" >DESERT ROSE</h3>
+            <h4 class="price ">$6.000</h4>
+            <button class="shop my-btn" id="btnAdd2" onclick="addTochart('item2','images/p2.jpg','DESERT ROSE ','6.000');this.style.display='none';document.getElementById('btnRmv2').style.display='inline-block'" >أضافة الى السلة</button>
+            <button class="shop rmv  " id="btnRmv2" onclick="removeItem('item2');this.style.display='none';document.getElementById('btnAdd2').style.display='inline-block'" >REMOVE FROM CHART</button>
+            <button class="btn btn-primary shop details" data-toggle="modal" data-target="#exampleModal6" >تفاصيل اكثر</button>
+
+         </div>
+        
+         <div class="p  col-lg-4 col-md-6 col-sm-12">
+            <img  src="images/p3.jpg" data-magnify-src="images/p3.jpg"  class="pimg"></img>
+            
+            <h3 class="ptitle" >GRAPE HYACINTH</h3>
+            <h4 class="price ">$8.000</h4>
+            <button class="shop my-btn" id="btnAdd3" onclick="addTochart('item3','images/p3.jpg','GRAPE HYACINTH','8.000');this.style.display='none';document.getElementById('btnRmv3').style.display='inline-block'">أضافة الى السلة</button>
+            <button class="shop rmv  " id="btnRmv3" onclick="removeItem('item3');this.style.display='none'; document.getElementById('btnAdd3').style.display='inline-block'" >REMOVE FROM CHART</button>
+            	<button class="btn btn-primary shop details" data-toggle="modal" data-target="#exampleModal6" >تفاصيل اكثر</button>
+
+         </div>
+        </div>
+		 <!-- <button class="btn btn-success" onclick="document.getElementById('more').style.visibility='visible';this.style.visibility='hidden';">Show more</button> -->
+		 <div id="more row">
+         <div class="p  col-lg-4 col-md-6 col-sm-12">
+		
+		
+            <img  src="images/p4.jpg" data-magnify-src="images/p4.jpg"  class="pimg"></img>
+            
+            <h3 class="ptitle" >BACHELOR’S BUTTON</h3>
+            <h4 class="price ">$9.000</h4>
+            <button class="shop my-btn" id="btnAdd4" onclick="addTochart('item4','images/p4.jpg','BACHELOR’S ','9.000');this.style.display='none';document.getElementById('btnRmv4').style.display='inline-block'">أضافة الى السلة</button>
+            <button class="shop rmv " id="btnRmv4" onclick="removeItem('item4');this.style.display='none';document.getElementById('btnAdd4').style.display='inline-block'" >REMOVE FROM CHART</button>
+            		 <button class="btn btn-primary shop details" data-toggle="modal" data-target="#exampleModal6" >تفاصيل اكثر</button>
+
+            </div>
+            
+                
+            
+            <div class="p  col-lg-4 col-md-6 col-sm-12">
+                <img  src="images/p5.jpg" data-magnify-src="images/p5.jpg"  class="pimg"></img>
+                
+                <h3 class="ptitle" >DESERT ROSE</h3>
+                <h4 class="price ">$6.000</h4>
+                
+                <button class="shop my-btn" id="btnAdd5" onclick="addTochart('item5','images/p5.jpg','DESERT ROSE ','6.000');this.style.display='none';document.getElementById('btnRmv5').style.display='inline-block'" >أضافة الى السلة</button>
+                <button class="shop rmv  " id="btnRmv5" onclick="removeItem('item5');this.style.display='none';document.getElementById('btnAdd5').style.display='inline-block'" >REMOVE FROM CHART</button>
+                <button class="btn btn-primary shop details" data-toggle="modal" data-target="#exampleModal6" >تفاصيل اكثر</button>
+
+             </div>
+            
+             <div class="p  col-lg-4 col-md-6 col-sm-12">
+                <img  src="images/p6.jpg" data-magnify-src="images/p6.jpg"  class="pimg"></img>
+                
+                <h3 class="ptitle" >GRAPE HYACINTH</h3>
+                <h4 class="price ">$8.000</h4>
+                
+                <button class="shop my-btn" id="btnAdd6" onclick="addTochart('item6','images/p6.jpg','GRAPE HYACINTH','8.000');this.style.display='none';document.getElementById('btnRmv6').style.display='inline-block'">أضافة الى السلة</button>
+                <button class="shop rmv  " id="btnRmv6" onclick="removeItem('item6');this.style.display='none';document.getElementById('btnAdd6').style.display='inline-block'" >REMOVE FROM CHART</button>
+                <button class="btn btn-primary shop details" data-toggle="modal" data-target="#exampleModal6" >تفاصيل اكثر</button>
+
+             </div>
+		</div>
+		</div>
+		
+	
+		
+		
+		
+    <div id="id01" class="modal">
+        <div class="checkout modal-content animate" style="padding: 10px;">
+      <h1 class="title">Set Your Product Details</h1>
+        <p class="title2" >cart</p>
+        <table class="table table-bordered " >
+            <thead class="tableHeader" style="background: #AECE89;font-family: 'Mansalva', cursive;">
+                <th>Item No.</th>	
+                <th>Product imge</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Remove</th>
+            </thead>
+            <tbody id="cartBody">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <button onclick="selectedItem()">getttttt</button>
+      <footer>
+        <div class="footer" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center" >
+                        <p>Copyright 2020 <a href="#">توليب فلاور</a>. All Rights Reserved. <br>Made by <a href="http://freehtml5.co/" target="_blank">eng.ibtehal Fahd</a> / date: <a href="https://unsplash.com/" target="_blank">13/10/2020</a></p>
+                        <p class="fh5co-social-icons">
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>  
+
+    <script>
+    function addTochart(key,img,title,price){
+      if(key in localStorage);
+      else{
+        item=[key,img,title,price];
+        localStorage.setItem(key,item);
+      }
+
+    }
+
+    </script>
+    <script>
+    function selectedItem(){
+        var values=[],keys=Object.keys(localStorage),i=keys.length;
+        while(i--){
+            values.push(localStorage.getItem(keys[i]));
+           // alert(localStorage.getItem(keys[i]));
+        }
+        return values;
+        
+    }
+    </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript" ></script>
+    <script>
+    window.onload=function(){
+      if('item1' in localStorage) {document.getElementById("btnAdd1").style.display='none';}
+      else {document.getElementById("btnRmv1").style.display='none'}
+      if('item2' in localStorage) {document.getElementById("btnAdd2").style.display='none';}
+      else {document.getElementById("btnRmv2").style.display='none';}
+      if('item3' in localStorage) {document.getElementById("btnAdd3").style.display='none';}
+      else {document.getElementById("btnRmv3").style.display='none';}
+      if('item4' in localStorage) {document.getElementById("btnAdd4").style.display='none'}
+      else {document.getElementById("btnRmv4").style.display='none';}
+      if('item5' in localStorage) {document.getElementById("btnAdd5").style.display='none'}
+      else {document.getElementById("btnRmv5").style.display='none';}
+      if('item6' in localStorage) {document.getElementById("btnAdd6").style.display='none'}
+      else {document.getElementById("btnRmv6").style.display='none';}
+
+    }
+    </script>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="js/flyto.js"></script>
+  <script>
+      $('.items').flyto({
+          item      : 'li',
+          target    : '.cart',
+          button    : '.my-btn'
+      });
+  </script>
+  	<script src="js/jquery.magnify.js"></script>
+
+	<script>
+        $(document).ready(function() {
+          $('img').magnify();
+        });
+        
+        
+        $('img').magnify({
+        
+          // URI of the large image
+          'src': '',
+        
+          // fade in/out speed
+          'speed': 100, 
+        
+          // timeout for mobile
+          'timeout': -1, 
+        
+          // Vertical touch point offset. Set this to something like 90 if you want to avoid your finger getting in the way of the magnifying lens on smartphones and tablets.
+          'touchBottomOffset': 0,
+        
+          // Width of the main image
+          'finalWidth': null,
+        
+          // Height of the main image
+          'finalHeight': null,
+        
+          // Width of the image displayed inside the magnifying lens
+          'magnifiedWidth': null,
+        
+          // Height of the image displayed inside the magnifying lens
+          'magnifiedHeight': null,
+        
+          // Set this to true to keep the edge of the image within the magnifying lens
+          'limitBounds': false,
+        
+          // Custom event to fire when you tap on the mobile close button. 
+          // Set this to 'click' or 'touchend' if it's conflicting with another event handler. 
+          // This option is only applicable when the mobile plugin (jquery.magnify-mobile.js) is used.
+          'mobileCloseEvent': 'touchstart',
+        
+          // callbacl
+          'afterLoad': function(){}
+          
+        });
+        
+        var $zoom = $('img').magnify();
+        // Disable zoom
+        $zoom.destroy();
+        </script>
+        <script>
+        var sel=document.getElementById
+         function selected(event){
+         this.classList.add="hidebtn";
+         
+         }
+         
+         
+        
+        </script>
+<script>
+  $(document).on("click", ".open-AddBookDialog", function () {
+     var myBookId = $(this).data('id');
+     $(".modal-body #bookId").val( myBookId );
+     // As pointed out in comments, 
+     // it is unnecessary to have to manually call the modal.
+     // $('#addBookDialog').modal('show');
+});
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+function showModel(){
+	document.getElementById('id01').style.display='block';	
+    var cart=document.getElementById("cartBody");
+    var items=selectedItem();
+    var item=items[0].split(",");
+    
+    for(i=0;i<=items.length;i++){
+        var item=items[i].split(",");
+        var tr=document.createElement("tr");
+        tr.setAttribute("id",item[0]+"tr")
+        cart.appendChild(tr);
+        var id=document.createElement("td");
+            id.innerText=i+1;
+            tr.appendChild(id);
+       
+            
+        for(n=1;n<=item.length;n++){
+            
+            var td=document.createElement("td");
+            if(n==1){
+               td.innerHTML="<img src="+ item[n]+" style='width:80px;height: 80px;'></img";
+            }
+            else if(n==3){
+              td.innerText=item[n];
+              td.setAttribute("id",item[0]+"price")
+
+            }
+            else{
+                td.innerText=item[n];
+               
+            }
+            tr.appendChild(td);
+        }
+        //var id=item[0];
+        // //alert(id);
+        var q=document.createElement("td");
+            td.innerHTML='<input type="number" id="'+item[0]+'quan" value="1" style="width:40px;" oninput="total(this);"/>';
+            tr.appendChild(q);
+        var subTotal=document.createElement("td");
+        subTotal.setAttribute("id",item[0]+"total")
+        tr.appendChild(subTotal);
+        var remove=document.createElement("td");
+            // total.innerHTML='<button id='+item[0]+' onclick="removeItem('+id+');">X</button>';
+            remove.innerHTML='<button id='+item[0]+' onclick="removeItem(this.id);">X</button>';
+            tr.appendChild(remove);
+    }
+
+	
+
+}
+function removeItem(item){
+    //alert(item.id);
+    var cart=document.getElementById("cartBody");
+    cart.removeChild(document.getElementById(item+"tr"));
+    localStorage.removeItem(item);
+    
+    }
+function total(item){
+ // alert(item.id.split("quan")[0]);
+  var to=document.getElementById(item.id.split("quan")[0]+"total");
+  var pr=parseInt(document.getElementById(item.id.split("quan")[0]+"price").innerText);
+  to.innerText=item.value*pr;
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    </script>
+	<script>
+    $(function() {
+       var projects = [
+{
+ "price": 15.99,
+ "instructions": "Large double. Good grower, heavy bloomer. Early to mid-season, acid loving plants. Plant in moist well drained soil with pH of 4.0-5.5.",
+ "photo": "images/p1.jpg",
+ "name": "Azalea",
+},
+{
+ "price": 33.99,
+ "instructions": "Beautiful large royal purple flowers adorn attractive satiny green leaves that turn orange\\/red in cold weather. Grows to up to 18 feet, or prune annually to shorten.",
+ "photo": "images/p2.jpg",
+ "name": "Tibouchina Semidecandra",
+},
+{
+ "price": 12.99,
+ "instructions": "Blooms in summer, 20-35 inches high. Fertilize regularly for best results. Full sun, drought tolerant.",
+ "photo": "images/p3.jpg",
+ "name": "Hibiscus",
+},
+{
+ "price": 5.99,
+ "instructions": "Quick-growing, herbaceous, shrub reaching up to 30 inches in height, forming a rounded, dense bush.",
+ "photo": "images/p4.jpg",
+ "name": "Plectranthus",
+},
+{
+ "price": 15.99,
+ "instructions": "Slow growing, upright to spreading shrub. Oval, glossy, leaves and profuse winter to spring blooming flowers.",
+ "photo": "images/p5.jpg",
+ "name": "Camellia Japonica",
+},
+{
+ "price": 10.99,
+ "instructions": "Thorny woody vine scrambles over other plants with their hooked thorns. Pest free.",
+ "photo": "images/p6.jpg",
+ "name": "Bougainvillea Spectabilis",
+}
+
+]
+       $( "#project" ).autocomplete({
+          minLength: 1,
+          source: projects,
+          focus: function( event, ui ) {
+             $( "#project" ).val( ui.item.name );
+                return false;
+          },
+          select: function( event, ui ) {
+             $( "#name" ).html( ui.item.name );
+             $( "#rprice" ).html( ui.item.price );
+             $( "#project-description" ).html( ui.item.instructions );
+             $( "#img" ).attr("src", ui.item.photo);
+             $( "#img" ).css({'width':'80%','height':'400px'});
+             return false;
+          }
+       })
+   
+       .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+          return $( "<li>" )
+          .append( "<a>" + item.name + "<br>" + item.instructions + "</a>" )
+          .appendTo( ul );
+       };
+    });
+ </script>
+		
+</body>
+
+</html> 
